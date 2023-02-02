@@ -670,9 +670,9 @@
     #define DEFAULT_Ki_LIST {   0.57,   0.57 }
     #define DEFAULT_Kd_LIST {  37.76,  37.76 }
   #else
-    #define DEFAULT_Kp   9.31
-    #define DEFAULT_Ki   0.57
-    #define DEFAULT_Kd  37.76
+    #define DEFAULT_Kp  15.7007
+    #define DEFAULT_Ki   1.1831
+    #define DEFAULT_Kd  52.0909
   #endif
 #endif
 
@@ -754,9 +754,9 @@
   //#define PID_BED_DEBUG // Print Bed PID debug data to the serial port.
 
   // Genius
-  #define DEFAULT_bedKp 92.46
-  #define DEFAULT_bedKi 16.12
-  #define DEFAULT_bedKd 132.55
+  #define DEFAULT_bedKp  21.8237
+  #define DEFAULT_bedKi   2.6378
+  #define DEFAULT_bedKd 120.3723
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -1177,7 +1177,7 @@
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 50, 40 }
+#define DEFAULT_MAX_FEEDRATE          { 200, 200, 20, 40 }
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -1260,7 +1260,7 @@
  *
  * See https://github.com/synthetos/TinyG/wiki/Jerk-Controlled-Motion-Explained
  */
-#define S_CURVE_ACCELERATION
+//#define S_CURVE_ACCELERATION
 
 //===========================================================================
 //============================= Z Probe Options =============================
@@ -1700,8 +1700,8 @@
 #define Y_BED_SIZE 220
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
-#define X_MIN_POS -2
-#define Y_MIN_POS -5
+#define X_MIN_POS 0
+#define Y_MIN_POS 0
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
